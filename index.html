@@ -1,50 +1,76 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ferdnard Osoti | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin:0; line-height:1.6; }
-    header { background:#333; color:#fff; padding:20px; text-align:center; }
-    nav { background:#555; padding:10px; text-align:center; }
-    nav a { color:#fff; margin:0 10px; text-decoration:none; }
-    section { padding:20px; }
-    .container { max-width:1000px; margin:auto; }
-    .projects div { background:#f4f4f4; margin:10px 0; padding:15px; border-radius:8px; }
-    footer { background:#333; color:#fff; text-align:center; padding:10px; }
-    button { padding:10px 15px; border:none; background:#333; color:#fff; cursor:pointer; }
+    :root{--bg:#0f172a;--card:#111827;--accent:#22c55e;--text:#e5e7eb;--muted:#9ca3af}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Poppins,system-ui,Arial;background:linear-gradient(120deg,#0f172a,#020617);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:auto;padding:20px}
+    header{padding:60px 20px;text-align:center}
+    header h1{font-size:2.5rem;margin:0}
+    header p{color:var(--muted)}
+    nav{display:flex;justify-content:center;gap:20px;padding:10px;background:#020617;position:sticky;top:0}
+    nav a{font-size:14px;color:var(--muted)}
+    nav a:hover{color:#fff}
+    .btn{display:inline-block;margin-top:15px;padding:10px 18px;border-radius:999px;background:var(--accent);color:#022c22;font-weight:600}
+    section{margin:40px 0}
+    h2{margin-bottom:10px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    .card{background:var(--card);padding:20px;border-radius:16px;box-shadow:0 10px 20px rgba(0,0,0,.3);transition:.3s}
+    .card:hover{transform:translateY(-5px)}
+    .skills span{display:inline-block;background:#1f2937;padding:6px 10px;margin:5px;border-radius:8px;font-size:12px}
+    footer{text-align:center;padding:20px;color:var(--muted)}
   </style>
 </head>
 <body><header>
   <h1>Ferdnard Bosire Osoti</h1>
-  <p>Software Developer | Web Designer</p>
+  <p>Software Developer • Web Designer • Networking Enthusiast</p>
+  <a class="btn" href="#contact">Hire Me</a>
+  <a class="btn" href="#" onclick="downloadCV()">Download CV</a>
 </header><nav>
   <a href="#about">About</a>
+  <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </nav><section id="about" class="container">
   <h2>About Me</h2>
-  <p>I am a passionate software developer with skills in web development, networking, and system design. I recently completed my studies and I am eager to build real-world solutions.</p>
-</section><section id="projects" class="container projects">
-  <h2>Projects</h2>
-  <div>
-    <h3>Pharmacy Management System</h3>
-    <p>A VB.NET system for managing patient records and prescriptions.</p>
+  <p>I am a recent graduate passionate about building modern web applications and solving real-world problems. I have experience in VB.NET systems, networking, and front-end development.</p>
+</section><section id="skills" class="container">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+    <span>VB.NET</span><span>Networking</span><span>Database Management</span>
   </div>
-  <div>
-    <h3>Networking Lab Setup</h3>
-    <p>Configured local networks and shared resources between computers.</p>
+</section><section id="projects" class="container">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Pharmacy Management System</h3>
+      <p>Developed using VB.NET to manage patients, prescriptions, and records.</p>
+    </div>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>A responsive personal website to showcase my skills and projects.</p>
+    </div>
+    <div class="card">
+      <h3>Networking Setup</h3>
+      <p>Configured LAN networks, file sharing, and DNS troubleshooting.</p>
+    </div>
   </div>
 </section><section id="contact" class="container">
   <h2>Contact</h2>
   <p>Email: frednardosoti45@gmail.com</p>
   <p>Phone: 0769193340</p>
-  <button onclick="showMessage()">Say Hello</button>
+  <a class="btn" href="mailto:frednardosoti45@gmail.com">Email Me</a>
 </section><footer>
-  <p>&copy; 2026 Ferdnard Osoti</p>
+  <p>© 2026 Ferdnard Osoti • Built with passion</p>
 </footer><script>
-  function showMessage() {
-    alert("Thanks for visiting my portfolio!");
-  }
+function downloadCV(){
+  alert("Upload your CV file later and link it here.");
+}
 </script></body>
 </html>
