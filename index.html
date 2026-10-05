@@ -25,14 +25,12 @@
       --bg: #020617;
       --bg2: #0f172a;
       --card: #111827;
-      --card2: #172033;
-      --blue: #38bdf8;
-      --blue2: #0ea5e9;
-      --green: #22c55e;
-      --white: #f8fafc;
+      --accent: #38bdf8;
+      --accent-dark: #0ea5e9;
       --text: #e2e8f0;
+      --white: #f8fafc;
       --muted: #94a3b8;
-      --border: rgba(148,163,184,0.15);
+      --border: rgba(148, 163, 184, 0.15);
     }
 
     * {
@@ -91,7 +89,7 @@
       top: 0;
       z-index: 1000;
 
-      background: rgba(2, 6, 23, 0.9);
+      background: rgba(2, 6, 23, 0.92);
       backdrop-filter: blur(15px);
 
       border-bottom: 1px solid var(--border);
@@ -116,7 +114,7 @@
     }
 
     .logo span {
-      color: var(--blue);
+      color: var(--accent);
     }
 
     .nav-links {
@@ -132,7 +130,7 @@
     }
 
     .nav-links a:hover {
-      color: var(--blue);
+      color: var(--accent);
     }
 
 
@@ -142,10 +140,8 @@
 
     .hero {
       min-height: 90vh;
-
       display: flex;
       align-items: center;
-
       padding: 70px 0;
     }
 
@@ -156,9 +152,9 @@
       align-items: center;
     }
 
-    .hero-text .small-title {
-      color: var(--blue);
-      font-weight: 600;
+    .small-title {
+      color: var(--accent);
+      font-weight: 700;
       margin-bottom: 15px;
       letter-spacing: 1px;
     }
@@ -172,7 +168,7 @@
     }
 
     .hero h1 span {
-      color: var(--blue);
+      color: var(--accent);
     }
 
     .hero-subtitle {
@@ -206,7 +202,7 @@
     }
 
     .btn-primary {
-      background: var(--blue);
+      background: var(--accent);
       color: #082f49;
     }
 
@@ -222,14 +218,14 @@
     }
 
     .btn-outline:hover {
-      border-color: var(--blue);
-      color: var(--blue);
+      border-color: var(--accent);
+      color: var(--accent);
       transform: translateY(-3px);
     }
 
 
     /* =========================
-       PHOTO AREA
+       PHOTO PLACEHOLDER
     ========================= */
 
     .profile-wrapper {
@@ -340,8 +336,8 @@
 
     .skill:hover {
       transform: translateY(-4px);
-      border-color: var(--blue);
-      color: var(--blue);
+      border-color: var(--accent);
+      color: var(--accent);
     }
 
 
@@ -376,6 +372,7 @@
 
     .project::before {
       content: "";
+
       position: absolute;
 
       width: 120px;
@@ -391,6 +388,7 @@
 
     .project:hover {
       transform: translateY(-8px);
+
       border-color: rgba(56,189,248,.4);
 
       box-shadow:
@@ -402,7 +400,7 @@
     }
 
     .project-number {
-      color: var(--blue);
+      color: var(--accent);
       font-weight: 700;
       font-size: .85rem;
     }
@@ -439,7 +437,7 @@
     }
 
     .project-link {
-      color: var(--blue);
+      color: var(--accent);
       font-weight: 600;
       font-size: .9rem;
     }
@@ -514,7 +512,7 @@
 
     .contact-card:hover {
       transform: translateY(-5px);
-      border-color: var(--blue);
+      border-color: var(--accent);
     }
 
     .contact-icon {
@@ -550,7 +548,7 @@
     }
 
     footer strong {
-      color: var(--blue);
+      color: var(--accent);
     }
 
 
@@ -706,17 +704,28 @@
             Hire Me
           </a>
 
-          <!-- FIXED CV LINK -->
-          <a href="/Portfolio-/Ferdnard_Bosire_Osoti_CV.pdf"
-             class="btn btn-outline"
-             target="_blank">
+          <!-- CV LINK -->
+
+          <a
+            href="/Portfolio-/Ferdnard_Bosire_Osoti_CV.pdf"
+            class="btn btn-outline"
+            target="_blank"
+            rel="noopener noreferrer">
+
             Download CV
+
           </a>
 
-          <a href="https://github.com/Ferddy999"
-             class="btn btn-outline"
-             target="_blank">
+          <!-- GITHUB -->
+
+          <a
+            href="https://github.com/Ferddy999"
+            class="btn btn-outline"
+            target="_blank"
+            rel="noopener noreferrer">
+
             GitHub
+
           </a>
 
         </div>
@@ -734,7 +743,9 @@
             👨🏾‍💻
           </div>
 
-          <h3>Ferdnard Osoti</h3>
+          <h3>
+            Ferdnard Osoti
+          </h3>
 
           <p>
             Software Developer
@@ -765,7 +776,9 @@
 
     <div class="section-title">
 
-      <h2>About Me</h2>
+      <h2>
+        About Me
+      </h2>
 
       <p>
         Software • Technology • Problem Solving
@@ -813,7 +826,9 @@
 
     <div class="section-title">
 
-      <h2>Technical Skills</h2>
+      <h2>
+        Technical Skills
+      </h2>
 
       <p>
         Technologies and tools I work with
@@ -863,7 +878,9 @@
 
     <div class="section-title">
 
-      <h2>Featured Projects</h2>
+      <h2>
+        Featured Projects
+      </h2>
 
       <p>
         A selection of systems and applications I have developed
@@ -875,7 +892,7 @@
     <div class="projects">
 
 
-      <!-- INSURANCE -->
+      <!-- 01 INSURANCE ALERT SYSTEM -->
 
       <div class="project featured">
 
@@ -905,13 +922,13 @@
         </div>
 
         <span class="coming">
-          🚀 Featured Project
+          🚀 Repository Coming Soon
         </span>
 
       </div>
 
 
-      <!-- SMARTPOS -->
+      <!-- 02 SMARTPOS -->
 
       <div class="project">
 
@@ -939,13 +956,13 @@
         </div>
 
         <span class="coming">
-          💻 Development Project
+          💻 Repository Coming Soon
         </span>
 
       </div>
 
 
-      <!-- CHURCH -->
+      <!-- 03 CHURCH CHOIR -->
 
       <div class="project">
 
@@ -974,13 +991,13 @@
         </div>
 
         <span class="coming">
-          🌐 Web Application
+          🌐 Repository Coming Soon
         </span>
 
       </div>
 
 
-      <!-- JAVA CHAT -->
+      <!-- 04 JAVA CHAT -->
 
       <div class="project featured">
 
@@ -993,10 +1010,9 @@
         </h3>
 
         <p>
-          A real-time multi-user desktop chat application built with
-          Java Swing and socket programming. Features include file
-          transfer, emojis, avatars, private messaging and
-          notification sounds.
+          A real-time multi-user desktop chat application built
+          with Java Swing and socket programming. The application
+          includes messaging and desktop communication features.
         </p>
 
         <div class="tech">
@@ -1010,14 +1026,17 @@
         <a
           class="project-link"
           href="https://github.com/Ferddy999/Advanced-Java-Chat-App"
-          target="_blank">
+          target="_blank"
+          rel="noopener noreferrer">
+
           View on GitHub →
+
         </a>
 
       </div>
 
 
-      <!-- PHARMACY -->
+      <!-- 05 PHARMACY -->
 
       <div class="project">
 
@@ -1030,9 +1049,9 @@
         </h3>
 
         <p>
-          A desktop information system designed for managing pharmacy
-          information, patient records and prescription-related
-          data.
+          A desktop information system designed for managing
+          pharmacy information, patient records and
+          prescription-related data.
         </p>
 
         <div class="tech">
@@ -1044,13 +1063,13 @@
         </div>
 
         <span class="coming">
-          💊 Desktop Application
+          💊 Repository Coming Soon
         </span>
 
       </div>
 
 
-      <!-- LIBRARY -->
+      <!-- 06 LIBRARY -->
 
       <div class="project">
 
@@ -1076,13 +1095,13 @@
         </div>
 
         <span class="coming">
-          📚 Management System
+          📚 Repository Coming Soon
         </span>
 
       </div>
 
 
-      <!-- NETWORKING -->
+      <!-- 07 NETWORKING -->
 
       <div class="project">
 
@@ -1095,9 +1114,9 @@
         </h3>
 
         <p>
-          Practical networking work involving LAN configuration,
-          resource sharing, connectivity troubleshooting and
-          computer hardware support.
+          Practical networking and IT support work involving
+          LAN configuration, resource sharing, connectivity
+          troubleshooting and computer hardware support.
         </p>
 
         <div class="tech">
@@ -1110,13 +1129,13 @@
         </div>
 
         <span class="coming">
-          🌐 Networking
+          🌐 Repository Coming Soon
         </span>
 
       </div>
 
 
-      <!-- PORTFOLIO -->
+      <!-- 08 PERSONAL PORTFOLIO -->
 
       <div class="project">
 
@@ -1129,9 +1148,9 @@
         </h3>
 
         <p>
-          A responsive personal portfolio designed to showcase my
-          technical skills, projects, professional background and
-          contact information.
+          My personal developer portfolio showcasing my skills,
+          projects, professional background and contact
+          information.
         </p>
 
         <div class="tech">
@@ -1143,9 +1162,15 @@
 
         </div>
 
-        <span class="coming">
-          🌐 This Website
-        </span>
+        <a
+          class="project-link"
+          href="https://ferddy999.github.io/Portfolio-/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          View Live Website →
+
+        </a>
 
       </div>
 
@@ -1176,11 +1201,11 @@
         technical skills, projects and professional background.
       </p>
 
-      <!-- FIXED CV LINK -->
       <a
         href="/Portfolio-/Ferdnard_Bosire_Osoti_CV.pdf"
         class="btn btn-primary"
-        target="_blank">
+        target="_blank"
+        rel="noopener noreferrer">
 
         Download My CV
 
@@ -1203,7 +1228,9 @@
 
     <div class="section-title">
 
-      <h2>Let's Connect</h2>
+      <h2>
+        Let's Connect
+      </h2>
 
       <p>
         Have a project, opportunity or idea? Get in touch.
@@ -1215,6 +1242,8 @@
     <div class="contact-grid">
 
 
+      <!-- EMAIL -->
+
       <a
         href="mailto:frednardosoti45@gmail.com"
         class="contact-card">
@@ -1223,7 +1252,9 @@
           ✉️
         </div>
 
-        <h3>Email</h3>
+        <h3>
+          Email
+        </h3>
 
         <p>
           frednardosoti45@gmail.com
@@ -1231,6 +1262,8 @@
 
       </a>
 
+
+      <!-- PHONE -->
 
       <a
         href="tel:0769193340"
@@ -1240,7 +1273,9 @@
           📱
         </div>
 
-        <h3>Phone</h3>
+        <h3>
+          Phone
+        </h3>
 
         <p>
           0769193340
@@ -1249,16 +1284,21 @@
       </a>
 
 
+      <!-- GITHUB -->
+
       <a
         href="https://github.com/Ferddy999"
         target="_blank"
+        rel="noopener noreferrer"
         class="contact-card">
 
         <div class="contact-icon">
           💻
         </div>
 
-        <h3>GitHub</h3>
+        <h3>
+          GitHub
+        </h3>
 
         <p>
           github.com/Ferddy999
