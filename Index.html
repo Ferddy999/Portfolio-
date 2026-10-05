@@ -3,219 +3,1288 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ferdnard Osoti | Portfolio</title>
+
+  <title>Ferdnard Bosire Osoti | Software Developer</title>
+
+  <meta name="description"
+        content="Portfolio of Ferdnard Bosire Osoti, Software Developer and ICT Professional.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
   <style>
+
+    /* =========================
+       GLOBAL
+    ========================= */
+
+    :root {
+      --bg: #020617;
+      --bg2: #0f172a;
+      --card: #111827;
+      --card2: #172033;
+      --blue: #38bdf8;
+      --blue2: #0ea5e9;
+      --green: #22c55e;
+      --white: #f8fafc;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: rgba(148,163,184,0.15);
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(14,165,233,.12), transparent 30%),
+        linear-gradient(135deg, #020617, #0f172a 50%, #020617);
+      color: var(--text);
+      line-height: 1.7;
     }
 
-    header {
-      background: linear-gradient(135deg, #333 0%, #555 100%);
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      color: #ddd;
-    }
-
-    nav {
-      background: #555;
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 20px;
+    a {
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #4CAF50;
-    }
-
-    section {
-      padding: 40px 20px;
+      color: inherit;
     }
 
     .container {
-      max-width: 1000px;
-      margin: 0 auto;
+      width: min(1120px, 92%);
+      margin: auto;
     }
 
-    section h2 {
-      font-size: 2em;
-      margin-bottom: 30px;
-      color: #333;
-      border-bottom: 3px solid #4CAF50;
-      padding-bottom: 10px;
+    section {
+      padding: 90px 0;
     }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-family: "Poppins", sans-serif;
+      font-size: 2.2rem;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(2, 6, 23, 0.9);
+      backdrop-filter: blur(15px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      width: min(1120px, 92%);
+      margin: auto;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--white);
+    }
+
+    .logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: .9rem;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 90vh;
+
+      display: flex;
+      align-items: center;
+
+      padding: 70px 0;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-text .small-title {
+      color: var(--blue);
+      font-weight: 600;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      color: #cbd5e1;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px 22px;
+      border-radius: 8px;
+
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #082f49;
+    }
+
+    .btn-primary:hover {
+      background: #7dd3fc;
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--white);
+      background: rgba(255,255,255,.03);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================
+       PHOTO AREA
+    ========================= */
+
+    .profile-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-placeholder {
+      width: 330px;
+      height: 400px;
+
+      border-radius: 25px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(14,165,233,.25),
+          rgba(15,23,42,.95)
+        );
+
+      border: 1px solid rgba(56,189,248,.25);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,.5),
+        0 0 50px rgba(14,165,233,.08);
+    }
+
+    .profile-icon {
+      width: 100px;
+      height: 100px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 3rem;
+
+      background: rgba(56,189,248,.1);
+      border: 2px solid rgba(56,189,248,.3);
+
+      margin-bottom: 20px;
+    }
+
+    .profile-placeholder h3 {
+      color: var(--white);
+      margin-bottom: 5px;
+    }
+
+    .profile-placeholder p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-box {
+      background: rgba(17,24,39,.7);
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+      padding: 35px;
+
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .about-box p {
+      color: #cbd5e1;
+      margin-bottom: 18px;
+    }
+
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .skill {
+      background: var(--card);
+      border: 1px solid var(--border);
+
+      padding: 12px 18px;
+      border-radius: 10px;
+
+      color: #cbd5e1;
+      font-size: .9rem;
+
+      transition: .3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-4px);
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+
+    /* =========================
+       PROJECTS
+    ========================= */
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
     }
 
-    .projects div {
-      background: #f9f9f9;
-      border: 2px solid #ddd;
-      padding: 20px;
-      border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    .project {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(17,24,39,.95),
+          rgba(15,23,42,.9)
+        );
+
+      border: 1px solid var(--border);
+      border-radius: 18px;
+
+      padding: 28px;
+
+      transition: .35s;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project::before {
+      content: "";
+      position: absolute;
+
+      width: 120px;
+      height: 120px;
+
+      background: rgba(56,189,248,.08);
+
+      border-radius: 50%;
+
+      top: -50px;
+      right: -40px;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      border-color: rgba(56,189,248,.4);
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,.35);
+    }
+
+    .project.featured {
+      border-color: rgba(56,189,248,.35);
+    }
+
+    .project-number {
+      color: var(--blue);
+      font-weight: 700;
+      font-size: .85rem;
+    }
+
+    .project h3 {
+      font-family: "Poppins", sans-serif;
+      color: var(--white);
+      font-size: 1.35rem;
+      margin: 8px 0 12px;
+    }
+
+    .project p {
+      color: var(--muted);
+      font-size: .93rem;
+      margin-bottom: 20px;
+    }
+
+    .tech {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 20px;
     }
 
-    .projects div:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      border-color: #4CAF50;
+    .tech span {
+      font-size: .75rem;
+
+      padding: 5px 9px;
+
+      background: #1e293b;
+      color: #cbd5e1;
+
+      border-radius: 6px;
     }
 
-    .projects h3 {
-      color: #4CAF50;
-      margin-bottom: 10px;
-      font-size: 1.3em;
+    .project-link {
+      color: var(--blue);
+      font-weight: 600;
+      font-size: .9rem;
     }
 
-    .projects p {
-      color: #666;
-      line-height: 1.8;
-      flex-grow: 1;
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .coming {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+
+    /* =========================
+       CV
+    ========================= */
+
+    .cv-section {
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(14,165,233,.08),
+          rgba(34,197,94,.04)
+        );
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cv-box {
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .cv-box h2 {
+      font-family: "Poppins", sans-serif;
+      color: var(--white);
+      font-size: 2.1rem;
       margin-bottom: 15px;
     }
 
-    .projects a {
-      display: inline-block;
-      background: #4CAF50;
-      color: #fff;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-      align-self: flex-start;
+    .cv-box p {
+      color: var(--muted);
+      margin-bottom: 25px;
     }
 
-    .projects a:hover {
-      background: #45a049;
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
-    #about p {
-      font-size: 1.1em;
-      color: #555;
-      line-height: 1.8;
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+
+      padding: 25px;
+      border-radius: 15px;
+
+      text-align: center;
+
+      transition: .3s;
     }
 
-    #contact {
-      background: #f5f5f5;
+    .contact-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--blue);
     }
 
-    #contact p {
-      font-size: 1.1em;
-      margin: 10px 0;
+    .contact-icon {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
     }
 
-    button {
-      padding: 12px 30px;
-      border: none;
-      background: #4CAF50;
-      color: #fff;
-      cursor: pointer;
-      font-size: 1em;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-      margin-top: 15px;
+    .contact-card h3 {
+      color: var(--white);
+      margin-bottom: 5px;
     }
 
-    button:hover {
-      background: #45a049;
+    .contact-card p {
+      color: var(--muted);
+      font-size: .9rem;
+      word-break: break-word;
     }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      background: #333;
-      color: #fff;
+      border-top: 1px solid var(--border);
+
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+
+      padding: 30px 20px;
+
+      color: var(--muted);
+      font-size: .85rem;
     }
+
+    footer strong {
+      color: var(--blue);
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width: 850px) {
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .profile-wrapper {
+        order: -1;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media(max-width: 600px) {
+
+      section {
+        padding: 65px 0;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .profile-placeholder {
+        width: 270px;
+        height: 330px;
+      }
+
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+
+    }
+
   </style>
 </head>
+
+
 <body>
 
-<header>
-  <h1>Ferdnard Bosire Osoti</h1>
-  <p>Software Developer | Web Designer</p>
-</header>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+
+  <div class="nav-container">
+
+    <a href="#home" class="logo">
+      FO<span>.</span>
+    </a>
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="#home">Home</a>
+      </li>
+
+      <li>
+        <a href="#about">About</a>
+      </li>
+
+      <li>
+        <a href="#skills">Skills</a>
+      </li>
+
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+
+    </ul>
+
+  </div>
+
 </nav>
 
-<section id="about" class="container">
-  <h2>About Me</h2>
-  <p>I am a passionate software developer with skills in web development, networking, and system design. I recently completed my studies and I am eager to build real-world solutions.</p>
-</section>
 
-<section id="projects" class="container">
-  <h2>Projects</h2>
-  <div class="projects">
-    <div>
-      <h3>Pharmacy Management System</h3>
-      <p>A VB.NET system for managing patient records and prescriptions.</p>
+<!-- =========================
+     HERO
+========================= -->
+
+<header id="home" class="hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="hero-text">
+
+        <div class="small-title">
+          HELLO, I'M
+        </div>
+
+        <h1>
+          Ferdnard<br>
+          <span>Bosire Osoti.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Software Developer • ICT Professional
+        </p>
+
+        <p class="hero-description">
+          I build practical digital solutions that solve real-world
+          problems. My interests include software development,
+          database systems, web applications, networking and
+          technology-driven solutions.
+        </p>
+
+        <div class="buttons">
+
+          <a href="#contact" class="btn btn-primary">
+            Hire Me
+          </a>
+
+          <a href="Ferdnard_Osoti_Final_CV.pdf"
+             class="btn btn-outline"
+             target="_blank">
+            Download CV
+          </a>
+
+          <a href="https://github.com/Ferddy999"
+             class="btn btn-outline"
+             target="_blank">
+            GitHub
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO PLACEHOLDER -->
+
+      <div class="profile-wrapper">
+
+        <div class="profile-placeholder">
+
+          <div class="profile-icon">
+            👨🏾‍💻
+          </div>
+
+          <h3>Ferdnard Osoti</h3>
+
+          <p>
+            Software Developer
+          </p>
+
+          <p style="margin-top:10px;">
+            Professional photo coming soon
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
-    <div>
-      <h3>Networking Lab Setup</h3>
-      <p>Configured local networks and shared resources between computers.</p>
-    </div>
-    <div>
-      <h3>Advanced Java Chat Application</h3>
-      <p>Real-time multi-user desktop chat application built using Java Swing and Socket Programming. Includes file transfer, emojis, avatars, private messaging and notification sounds.</p>
-      <a href="https://github.com/Ferddy999/Advanced-Java-Chat-App" target="_blank">View Project</a>
-    </div>
+
   </div>
+
+</header>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>About Me</h2>
+
+      <p>
+        Software • Technology • Problem Solving
+      </p>
+
+    </div>
+
+
+    <div class="about-box">
+
+      <p>
+        I am Ferdnard Bosire Osoti, a Software Developer and ICT
+        professional with a strong interest in building useful
+        technology solutions.
+      </p>
+
+      <p>
+        I recently completed my studies in Information Communication
+        Technology and have developed practical projects involving
+        software development, databases, networking and system design.
+      </p>
+
+      <p>
+        I enjoy transforming ideas into functional applications,
+        learning new technologies and solving technical problems.
+        My goal is to continue growing as a developer while creating
+        reliable systems that provide real value to users and
+        organizations.
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
 
-<section id="contact" class="container">
-  <h2>Contact</h2>
-  <p><strong>Email:</strong> frednardosoti45@gmail.com</p>
-  <p><strong>Phone:</strong> 0769193340</p>
-  <button onclick="showMessage()">Say Hello</button>
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Technical Skills</h2>
+
+      <p>
+        Technologies and tools I work with
+      </p>
+
+    </div>
+
+
+    <div class="skills">
+
+      <span class="skill">Python</span>
+      <span class="skill">Java</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">HTML5</span>
+      <span class="skill">CSS3</span>
+      <span class="skill">VB.NET</span>
+
+      <span class="skill">FastAPI</span>
+      <span class="skill">Node.js</span>
+      <span class="skill">Express.js</span>
+
+      <span class="skill">SQLite</span>
+      <span class="skill">SQL</span>
+
+      <span class="skill">Git</span>
+      <span class="skill">GitHub</span>
+
+      <span class="skill">Networking</span>
+      <span class="skill">Hardware Troubleshooting</span>
+      <span class="skill">System Design</span>
+      <span class="skill">Database Management</span>
+
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Featured Projects</h2>
+
+      <p>
+        A selection of systems and applications I have developed
+      </p>
+
+    </div>
+
+
+    <div class="projects">
+
+
+      <!-- INSURANCE -->
+
+      <div class="project featured">
+
+        <div class="project-number">
+          01 • FEATURED PROJECT
+        </div>
+
+        <h3>
+          Insurance Alert System
+        </h3>
+
+        <p>
+          A system designed to track insurance policies and vehicle
+          information, provide officer and client authentication,
+          monitor policy expiry dates and automatically send expiry
+          notifications. Includes reports and CSV data handling.
+        </p>
+
+        <div class="tech">
+
+          <span>Python</span>
+          <span>FastAPI</span>
+          <span>SQLite</span>
+          <span>SendGrid</span>
+          <span>APScheduler</span>
+
+        </div>
+
+        <span class="coming">
+          🚀 Featured Project
+        </span>
+
+      </div>
+
+
+      <!-- SMARTPOS -->
+
+      <div class="project">
+
+        <div class="project-number">
+          02
+        </div>
+
+        <h3>
+          SmartPOS
+        </h3>
+
+        <p>
+          A point-of-sale system focused on product management,
+          inventory, sales processing, payment methods and receipt
+          generation.
+        </p>
+
+        <div class="tech">
+
+          <span>.NET</span>
+          <span>SQLite</span>
+          <span>Razor Pages</span>
+          <span>POS</span>
+
+        </div>
+
+        <span class="coming">
+          💻 Development Project
+        </span>
+
+      </div>
+
+
+      <!-- CHURCH -->
+
+      <div class="project">
+
+        <div class="project-number">
+          03
+        </div>
+
+        <h3>
+          Church Choir Management System
+        </h3>
+
+        <p>
+          A local church choir website with an administration
+          dashboard for managing members, songs, activities,
+          services and gallery content.
+        </p>
+
+        <div class="tech">
+
+          <span>Node.js</span>
+          <span>Express.js</span>
+          <span>SQLite</span>
+          <span>HTML</span>
+          <span>CSS</span>
+
+        </div>
+
+        <span class="coming">
+          🌐 Web Application
+        </span>
+
+      </div>
+
+
+      <!-- JAVA CHAT -->
+
+      <div class="project featured">
+
+        <div class="project-number">
+          04
+        </div>
+
+        <h3>
+          Advanced Java Chat Application
+        </h3>
+
+        <p>
+          A real-time multi-user desktop chat application built with
+          Java Swing and socket programming. Features include file
+          transfer, emojis, avatars, private messaging and
+          notification sounds.
+        </p>
+
+        <div class="tech">
+
+          <span>Java</span>
+          <span>Java Swing</span>
+          <span>Socket Programming</span>
+
+        </div>
+
+        <a
+          class="project-link"
+          href="https://github.com/Ferddy999/Advanced-Java-Chat-App"
+          target="_blank">
+          View on GitHub →
+        </a>
+
+      </div>
+
+
+      <!-- PHARMACY -->
+
+      <div class="project">
+
+        <div class="project-number">
+          05
+        </div>
+
+        <h3>
+          Pharmacy Management System
+        </h3>
+
+        <p>
+          A desktop information system designed for managing pharmacy
+          information, patient records and prescription-related
+          data.
+        </p>
+
+        <div class="tech">
+
+          <span>VB.NET</span>
+          <span>Database</span>
+          <span>Windows Forms</span>
+
+        </div>
+
+        <span class="coming">
+          💊 Desktop Application
+        </span>
+
+      </div>
+
+
+      <!-- LIBRARY -->
+
+      <div class="project">
+
+        <div class="project-number">
+          06
+        </div>
+
+        <h3>
+          Smart Library Management System
+        </h3>
+
+        <p>
+          A library management application for managing books,
+          members, borrowing and returning operations.
+        </p>
+
+        <div class="tech">
+
+          <span>VB.NET</span>
+          <span>Database</span>
+          <span>Windows Forms</span>
+
+        </div>
+
+        <span class="coming">
+          📚 Management System
+        </span>
+
+      </div>
+
+
+      <!-- NETWORKING -->
+
+      <div class="project">
+
+        <div class="project-number">
+          07
+        </div>
+
+        <h3>
+          Networking & IT Support
+        </h3>
+
+        <p>
+          Practical networking work involving LAN configuration,
+          resource sharing, connectivity troubleshooting and
+          computer hardware support.
+        </p>
+
+        <div class="tech">
+
+          <span>Networking</span>
+          <span>LAN</span>
+          <span>IT Support</span>
+          <span>Troubleshooting</span>
+
+        </div>
+
+        <span class="coming">
+          🌐 Networking
+        </span>
+
+      </div>
+
+
+      <!-- PORTFOLIO -->
+
+      <div class="project">
+
+        <div class="project-number">
+          08
+        </div>
+
+        <h3>
+          Personal Portfolio Website
+        </h3>
+
+        <p>
+          A responsive personal portfolio designed to showcase my
+          technical skills, projects, professional background and
+          contact information.
+        </p>
+
+        <div class="tech">
+
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>GitHub Pages</span>
+
+        </div>
+
+        <span class="coming">
+          🌐 This Website
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CV
+========================= -->
+
+<section class="cv-section">
+
+  <div class="container">
+
+    <div class="cv-box">
+
+      <h2>
+        Interested in Working Together?
+      </h2>
+
+      <p>
+        Download my CV to learn more about my education,
+        technical skills, projects and professional background.
+      </p>
+
+      <a
+        href="Ferdnard_Osoti_Final_CV.pdf"
+        class="btn btn-primary"
+        target="_blank">
+
+        Download My CV
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Let's Connect</h2>
+
+      <p>
+        Have a project, opportunity or idea? Get in touch.
+      </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+      <a
+        href="mailto:frednardosoti45@gmail.com"
+        class="contact-card">
+
+        <div class="contact-icon">
+          ✉️
+        </div>
+
+        <h3>Email</h3>
+
+        <p>
+          frednardosoti45@gmail.com
+        </p>
+
+      </a>
+
+
+      <a
+        href="tel:0769193340"
+        class="contact-card">
+
+        <div class="contact-icon">
+          📱
+        </div>
+
+        <h3>Phone</h3>
+
+        <p>
+          0769193340
+        </p>
+
+      </a>
+
+
+      <a
+        href="https://github.com/Ferddy999"
+        target="_blank"
+        class="contact-card">
+
+        <div class="contact-icon">
+          💻
+        </div>
+
+        <h3>GitHub</h3>
+
+        <p>
+          github.com/Ferddy999
+        </p>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-  <p>&copy; 2026 Ferdnard Osoti</p>
+
+  <p>
+    © 2026 <strong>Ferdnard Bosire Osoti</strong>.
+    Built with passion and code.
+  </p>
+
 </footer>
 
-<script>
-  function showMessage() {
-    alert("Thanks for visiting my portfolio!");
-  }
-</script>
 
 </body>
 </html>
